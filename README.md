@@ -85,7 +85,7 @@ Use `run_cancel` for the exact job handle. A supervisor owns its process group o
 
 ## What is verified
 
-See `VALIDATION.json` in the release for exact local tests and limitations. The Linux tests use real subprocesses, protocol messages, isolated fake providers and generated fixture JARs. They do not exercise Minecraft rendering. Windows/macOS test jobs are provided in CI and remain unverified until actually run there. Existing Atlas and companion code are not silently installed or replaced. Read [bridge integration](docs/bridges.md) and [evidence formats](docs/evidence.md).
+See `VALIDATION.json` in the release for exact local tests and limitations. The Linux tests use real subprocesses, protocol messages, isolated fake providers and generated fixture JARs. They do not exercise Minecraft rendering. Windows and macOS have not been run through this test suite. Existing Atlas and companion code are not silently installed or replaced. Read [bridge integration](docs/bridges.md) and [evidence formats](docs/evidence.md).
 
 This is a private/local plugin distribution. It does not publish mods or upload source, logs, worlds or benchmark evidence to third parties. Release tracking means preparing an evidence-backed local decision; Modrinth/CurseForge/GitHub publication requires a separate configured integration and user instruction.
 
