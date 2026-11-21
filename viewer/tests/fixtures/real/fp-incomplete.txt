@@ -1,0 +1,55 @@
+INCOMPLETE feature-plan ON gate: java.lang.IllegalStateException: Workflow exceeded its 60-second gate in TELEPORTED
+route=CT224_ON_ONLY; acceptance applies only to this recorded machine
+gates=200_overlay_p95<=1ms,512_overlay_p95<=2ms,disabled_count=0,no_GL_error,no_failsafe,export_submission_frame_each_size<=100ms
+QA fixture_guardian approval=explicit_fixture_repair_property class=org.betterx.bclib.client.gui.screens.ConfirmFixScreen world=MiniAtlas-Visual-1790853134481 level_sha256=c2b07882ce6714cc0aa220b0d91a60191c072ce8b22e3d4ecb795b2a4f37ce5a provenance=independent_copy_marker action=backup_and_apply_fixes
+QA fixture_guardian transition=world_loaded_after_backup_and_fixes
+PASS initial_gl_state error=0
+renderer=NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2 version=4.6.0 NVIDIA 610.57.04
+PASS bearing_hud_full Bearing 245° WSW
+PASS bearing_hud_minimal Bearing 0° N
+PASS bearing_hud_classic Bearing 180° S
+PASS radar_loaded_entities client_fixture_pigs=200 actual_pins=256
+PASS overlay_200 samples=135 overlay_p50_ns=39349 overlay_p95_ns=66449 gate_ns=1000000 frame_p95_ns=47104211 dropped=0
+PASS overlay_512 samples=161 overlay_p50_ns=58319 overlay_p95_ns=75179 gate_ns=2000000 frame_p95_ns=30284966 dropped=0
+PASS trail_loaded_square recent_points=5 drawn_legs=4
+PASS trail_persisted_square recent_points=5 pages=1 bytes=65536
+PASS chunk_borders primitives=54
+PASS region_borders primitives=8 chunk_primitives=54
+PASS spawn_light_cache chunks=9 columns=780 candidates=902 markers=0 difficulty=PEACEFUL
+PASS spawn_light_invalidation block_x=0 block_z=64 affected_before=96 affected_after=0 unaffected_before=684 unaffected_after=684
+PASS spawn_light_recovery accepted_new_batches=1 chunks=8 cached_columns=692 columns_after_invalidation=684 recovered_footprint_columns=0
+LIMIT spawn_light: incremental cache/classifier and direct production invalidation exercised; recovery requires fresh accepted batches, not a complete 3x3 rebuild; no positive spawn-location or block-event-delivery assertion
+PASS optional_adapter_health waystones=0 create_primitives=0 status=ftbchunks is not installed; openpartiesandclaims is not installed
+PASS adapter_waystones installed=true successful_reads=1
+PASS adapter_create installed=true successful_reads=24
+PASS adapter_ftbchunks installed=false successful_reads=0
+PASS adapter_openpartiesandclaims installed=false successful_reads=0
+LIMIT optional_integrations: successful reads/no adapter failure only; empty Waystones/Create data does not verify marker positions, and absent claim mods do not verify claims rendering
+PASS measurement_flat distance=3.0 expected=3
+PASS measurement_terrain distance=5.0 expected=5
+PASS measurement_observed_terrain distance=5.0 horizontal=5
+PASS measure_projection_measure_low tilt=35.0 primitives=9
+PASS measure_projection_measure_high tilt=80.0 primitives=9
+PASS lighting_pixels opaque_samples=189866 changed_samples=189866 shader_uniform=true lighting_key=201001901
+PASS export_512_provider_pixels magenta_pixels=100 expected>=8
+PASS export_512_png file=map-2026-10-05T06-42-27.246357740Z-fb60400f.png bytes=151540 completion_ms=160 capture_ns=676893 admission_ns=253967 max_admission_step_ns=253967 max_submission_frame_ns=5958608 max_frame_interval_ns=32794639 gl_state=restored
+PASS export_512_submission_budget max_submission_frame_ns=5958608 gate_ns=100000000 capture_ns=676893 admission_ns=253967 max_admission_step_ns=253967 frame_interval_is_descriptive=true
+PASS export_1024_provider_pixels magenta_pixels=361 expected>=8
+PASS export_1024_png file=map-2026-10-05T06-42-29.443581014Z-2fd46e40.png bytes=568961 completion_ms=218 capture_ns=629163 admission_ns=41580 max_admission_step_ns=41580 max_submission_frame_ns=7489242 max_frame_interval_ns=34799359 gl_state=restored
+PASS export_1024_submission_budget max_submission_frame_ns=7489242 gate_ns=100000000 capture_ns=629163 admission_ns=41580 max_admission_step_ns=41580 frame_interval_is_descriptive=true
+PASS export_2048_provider_pixels magenta_pixels=1482 expected>=8
+PASS export_2048_png file=map-2026-10-05T06-42-31.737080348Z-cff08294.png bytes=1888164 completion_ms=347 capture_ns=844191 admission_ns=151408 max_admission_step_ns=104729 max_submission_frame_ns=6968078 max_frame_interval_ns=31243506 gl_state=restored
+PASS export_2048_submission_budget max_submission_frame_ns=6968078 gate_ns=100000000 capture_ns=844191 admission_ns=151408 max_admission_step_ns=104729 frame_interval_is_descriptive=true
+PASS default_off_inert primitives=0
+PASS workflow_commands actual_client_dispatch=true server_atlas_node_absent=true manual_add=true duplicate_block_refused=true measure_clear=true
+PASS workflow_chat formats=plain,labelled,xaero,journeymap actual_component_click=true duplicate_and_replay_refused=true malformed_refused=true receive_events=synthetic full_bus_messages=11 full_bus_original_text_rewrites=0
+PASS workflow_xaero_player_share synthetic_player_event=true local_PlayerInfo=true canceled_original_preserved=true rendered_Xaero_and_Atlas_actions=true actual_component_click=true duplicate_and_replay_refused=true precanceled_message_not_revived=true
+PASS workflow_share_roundtrip actual_Atlas_share_to_server_to_display_to_click=true server=unpublished_integrated sole_player=true external_recipients=false
+PASS workflow_sets create_assign_rename_hide_show_delete=true hidden_render_input_absent=true point_preserved=true coverage=production_repository_API
+PASS workflow_import_command actual_client_dispatch=true preview_screen_opened=true
+PASS workflow_import_xaero preview_read_only=true counts_and_set=true reimport_dedup=true undo_exact_snapshot=true coverage=production_preview_apply_undo_API
+PASS workflow_import_journeymap_legacy preview_read_only=true counts_and_set=true reimport_dedup=true undo_exact_snapshot=true coverage=production_preview_apply_undo_API
+PASS workflow_import_sources owned_synthetic_source_SHA256_unchanged=true actual_mod_files_touched=false
+PASS workflow_restored points_sets_settings_policy_permission_position_chat_and_owned_files=true
+PASS waypoints_restored full points and sets snapshot restored
+fixture_pigs_removed=200

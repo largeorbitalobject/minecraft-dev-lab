@@ -1,0 +1,10 @@
+{
+  "schema": "mcdev.fleet.v1",
+  "hosts": {
+    "mac": {"label": "Mac development client", "enabled": false, "node_id": "mac", "argv": []},
+    "proxmox-test": {"label": "Proxmox Minecraft test container", "enabled": false, "node_id": "proxmox-test", "argv": []},
+    "gpc": {"label": "GPC Windows / NVIDIA", "enabled": false, "node_id": "gpc", "argv": []},
+    "amd": {"label": "AMD test machine", "enabled": false, "node_id": "amd", "argv": []}
+  },
+  "workspaces": {}
+}

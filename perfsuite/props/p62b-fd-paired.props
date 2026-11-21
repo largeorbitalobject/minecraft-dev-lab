@@ -1,0 +1,12 @@
+orbitalatlas.playProfile=true
+orbitalatlas.diag=true
+orbitalatlas.mapPerfLog=true
+orbitalatlas.harnessCensusLite=true
+orbitalatlas.harnessPresentAll=true
+orbitalatlas.sceneMeshBudgetMb=120
+orbitalatlas.sceneMeshBudgetAdaptive=false
+orbitalatlas.storedMapDetailFloor=true
+orbitalatlas.worldCohortMemo=true
+orbitalatlas.openingSavedTexture=true
+orbitalatlas.artLandSplitScanCharge=true
+orbitalatlas.exactRestoreTrim=true

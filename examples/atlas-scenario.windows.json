@@ -1,0 +1,39 @@
+{
+  "schema": "mcdev.node.v1",
+  "id": "gpc",
+  "state_dir": "C:\\MinecraftDevLab\\private-state",
+  "expected_gpu": "NVIDIA: configuration expectation, verify the active renderer separately",
+  "guards": [],
+  "instances": {
+    "atlas-disposable": {
+      "label": "Existing GPC Atlas QA profile — operator configuration required",
+      "root": "C:\\Users\\<user>\\AppData\\Roaming\\ModrinthApp\\profiles\\Atlas-GPC-QA-cac7ce3",
+      "enabled": false,
+      "mods_dir": "mods",
+      "recipes": {
+        "atlas-map-scenario": {
+          "kind": "client",
+          "argv": [
+            "C:\\OPERATOR_CONFIGURED\\python.exe",
+            "C:\\OPERATOR_CONFIGURED\\reviewed-atlas-controller\\atlas_harness.py",
+            "run-owned",
+            "C:\\Users\\<user>\\AppData\\Roaming\\ModrinthApp\\profiles\\Atlas-GPC-QA-cac7ce3\\.atlas-qa\\PREPARED_SESSION_UUID",
+            "C:\\OPERATOR_CONFIGURED\\private\\atlas-desktop-grant.json",
+            "C:\\OPERATOR_CONFIGURED\\private\\atlas-native-config.json",
+            "status",
+            "open_map",
+            "screenshot",
+            "close_map"
+          ],
+          "cwd": ".",
+          "resource": "gpc-desktop",
+          "timeout_seconds": 960,
+          "output_limit_bytes": 262144,
+          "guards": [
+            ["C:\\OPERATOR_CONFIGURED\\approved-native-admission-guard.exe"]
+          ]
+        }
+      }
+    }
+  }
+}

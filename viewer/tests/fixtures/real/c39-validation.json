@@ -1,0 +1,69 @@
+{
+ "schema": "mcdevlab.c39-validation.v1",
+ "packet": "run-collector-r2-open/atomic-open-packet.json",
+ "packet_sha256": "8b29255914854b9baf495b86a4957c8255779cab6f30a381944801e5103ebd87",
+ "consumer": {
+  "path": "/root/minecraft-dev-plugin-c39",
+  "commit": "4368e31",
+  "pins": {
+   "mcdevlab/atlas_adapter.py": "5796ef5516f28abb0f63e377e6eb4dc4e89058d5e269b6dc8c553bc204c4e0f1",
+   "mcdevlab/atlas_frame_metrics.py": "fa41bbb39b45613b359266acf71dab0473d8a9049ed4c5977748432a258c7723"
+  }
+ },
+ "now_ms": 1791181290146,
+ "expected_map_open": true,
+ "validated_utc": "2026-10-05T07:11:18Z",
+ "calls": 1,
+ "verdict": "ACCEPTED_SUMMARY_ONLY",
+ "native_acceptance": "NOT_RUN",
+ "producer": "c39a0dbc2e4a401caa3e6d804053c6ffebfe43f0",
+ "stats": {
+  "reason": "COMPLETE",
+  "valid": true,
+  "sample_count": 441,
+  "median_ms": 17.851958,
+  "p95_ms": 43.204958,
+  "p99_ms": 73.352375,
+  "max_ms": 195.457208,
+  "hitches": 9
+ },
+ "labels": {
+  "scope": "SUMMARY_ONLY",
+  "wire_source_reference": "c39a0dbc2e4a401caa3e6d804053c6ffebfe43f0",
+  "wire_format": "CORRECTED_DISCRETE_OBSERVATIONS",
+  "stable_whole_window": "UNPROVEN_DISCRETE_OBSERVATIONS_ONLY",
+  "scene_observation_validation": "VALIDATED_DISCRETE_FIELDS",
+  "scene_current_match": true,
+  "fresh_status_identity_scope": "SUPPORTED_SCENE_CAMERA_VIEWPORT_ONLY",
+  "fresh_status_compared_fields": [
+   "world_folder",
+   "dimension",
+   "epoch",
+   "map_open",
+   "camera_x",
+   "camera_y",
+   "camera_z",
+   "camera_yaw",
+   "camera_tilt",
+   "camera_span",
+   "camera_scope",
+   "gui_width",
+   "gui_height",
+   "target_width",
+   "target_height",
+   "local_disposable_world"
+  ],
+  "fresh_status_unavailable_fields": [
+   "quality_settings",
+   "update_speed",
+   "fps_cap",
+   "vsync",
+   "smoke"
+  ],
+  "usable_for_matched_comparison": false,
+  "actual_drawn_camera": "UNSUPPORTED",
+  "gpu_time": "UNSUPPORTED",
+  "pixel_coverage": "UNSUPPORTED",
+  "native_acceptance": "NOT_RUN"
+ }
+}

@@ -1,0 +1,62 @@
+PASS feature-plan ON gate
+route=CT224_ON_ONLY; acceptance applies only to this recorded machine
+gates=200_overlay_p95<=1ms,512_overlay_p95<=2ms,disabled_count=0,no_GL_error,no_failsafe,export_submission_frame_each_size<=100ms
+QA fixture_guardian approval=explicit_fixture_repair_property class=org.betterx.bclib.client.gui.screens.ConfirmFixScreen world=MiniAtlas-Visual-1790853134481 level_sha256=c2b07882ce6714cc0aa220b0d91a60191c072ce8b22e3d4ecb795b2a4f37ce5a provenance=independent_copy_marker action=backup_and_apply_fixes
+QA fixture_guardian transition=world_loaded_after_backup_and_fixes
+PASS initial_gl_state error=0
+PASS sampler_binding_query real_driver_units=0,2 unrelated_active_unit=1 caller_state_restored=true gl_error=0
+renderer=NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2 version=4.6.0 NVIDIA 610.57.04
+PASS bearing_hud_full Bearing 245° WSW
+PASS bearing_hud_minimal Bearing 0° N
+PASS bearing_hud_classic Bearing 180° S
+PASS radar_loaded_entities client_fixture_pigs=200 actual_pins=256
+PASS overlay_200 samples=143 overlay_p50_ns=35629 overlay_p95_ns=53849 gate_ns=1000000 frame_p95_ns=43902527 dropped=0
+PASS overlay_512 samples=168 overlay_p50_ns=44990 overlay_p95_ns=76769 gate_ns=2000000 frame_p95_ns=30467596 dropped=0
+PASS trail_loaded_square recent_points=5 drawn_legs=4
+PASS trail_persisted_square recent_points=5 pages=1 bytes=65536
+PASS chunk_borders primitives=54
+PASS region_borders primitives=8 chunk_primitives=54
+PASS spawn_light_cache chunks=9 columns=530 candidates=571 markers=0 difficulty=PEACEFUL
+PASS spawn_light_invalidation block_x=0 block_z=64 affected_before=96 affected_after=0 unaffected_before=434 unaffected_after=434
+PASS spawn_light_recovery accepted_new_batches=1 chunks=8 cached_columns=442 columns_after_invalidation=434 recovered_footprint_columns=0
+LIMIT spawn_light: incremental cache/classifier and direct production invalidation exercised; recovery requires fresh accepted batches, not a complete 3x3 rebuild; no positive spawn-location or block-event-delivery assertion
+PASS optional_adapter_health waystones=0 create_primitives=0 status=ftbchunks is not installed; openpartiesandclaims is not installed
+PASS adapter_waystones installed=true successful_reads=1
+PASS adapter_create installed=true successful_reads=25
+PASS adapter_ftbchunks installed=false successful_reads=0
+PASS adapter_openpartiesandclaims installed=false successful_reads=0
+LIMIT optional_integrations: successful reads/no adapter failure only; empty Waystones/Create data does not verify marker positions, and absent claim mods do not verify claims rendering
+PASS measurement_flat distance=3.0 expected=3
+PASS measurement_terrain distance=5.0 expected=5
+PASS measurement_observed_terrain distance=5.0 horizontal=5
+PASS measure_projection_measure_low tilt=35.0 primitives=9
+PASS measure_projection_measure_high tilt=80.0 primitives=9
+PASS lighting_pixels opaque_samples=206867 changed_samples=206867 shader_uniform=true lighting_key=201001901
+PASS export_512_provider_pixels magenta_pixels=100 expected>=8
+PASS export_512_png file=map-2026-10-05T09-47-04.425773418Z-c47a66eb.png bytes=152128 completion_ms=168 capture_ns=707942 admission_ns=274547 max_admission_step_ns=274547 max_submission_frame_ns=8247899 max_frame_interval_ns=33675559 gl_state=restored setup_ns=219948 blit_ns=31589 overlay_ns=126409 pbo_ns=13090 read_pixels_ns=282617 fence_flush_ns=12869 restore_ns=21000
+PASS export_512_submission_budget max_submission_frame_ns=8247899 gate_ns=100000000 capture_ns=707942 admission_ns=274547 max_admission_step_ns=274547 frame_interval_is_descriptive=true setup_ns=219948 blit_ns=31589 overlay_ns=126409 pbo_ns=13090 read_pixels_ns=282617 fence_flush_ns=12869 restore_ns=21000
+PASS export_1024_provider_pixels magenta_pixels=361 expected>=8
+PASS export_1024_png file=map-2026-10-05T09-47-06.623877957Z-3d038c1f.png bytes=510170 completion_ms=117 capture_ns=488624 admission_ns=27420 max_admission_step_ns=27420 max_submission_frame_ns=5352401 max_frame_interval_ns=23105836 gl_state=restored setup_ns=98399 blit_ns=13129 overlay_ns=64340 pbo_ns=7100 read_pixels_ns=283577 fence_flush_ns=6670 restore_ns=15069
+PASS export_1024_submission_budget max_submission_frame_ns=5352401 gate_ns=100000000 capture_ns=488624 admission_ns=27420 max_admission_step_ns=27420 frame_interval_is_descriptive=true setup_ns=98399 blit_ns=13129 overlay_ns=64340 pbo_ns=7100 read_pixels_ns=283577 fence_flush_ns=6670 restore_ns=15069
+PASS export_2048_provider_pixels magenta_pixels=1482 expected>=8
+PASS export_2048_png file=map-2026-10-05T09-47-08.796629475Z-cc1fee34.png bytes=2050794 completion_ms=420 capture_ns=1157177 admission_ns=148148 max_admission_step_ns=118439 max_submission_frame_ns=8350408 max_frame_interval_ns=47652756 gl_state=restored setup_ns=139198 blit_ns=18730 overlay_ns=101349 pbo_ns=8280 read_pixels_ns=856370 fence_flush_ns=9780 restore_ns=22420
+PASS export_2048_submission_budget max_submission_frame_ns=8350408 gate_ns=100000000 capture_ns=1157177 admission_ns=148148 max_admission_step_ns=118439 frame_interval_is_descriptive=true setup_ns=139198 blit_ns=18730 overlay_ns=101349 pbo_ns=8280 read_pixels_ns=856370 fence_flush_ns=9780 restore_ns=22420
+PASS default_off_inert primitives=0
+PASS workflow_commands actual_client_dispatch=true server_atlas_node_absent=true manual_add=true duplicate_block_refused=true measure_clear=true
+PASS workflow_chat formats=plain,labelled,xaero,journeymap actual_component_click=true duplicate_and_replay_refused=true malformed_refused=true receive_events=synthetic full_bus_messages=11 full_bus_original_text_rewrites=0
+PASS workflow_xaero_player_share synthetic_player_event=true local_PlayerInfo=true canceled_original_preserved=true rendered_Xaero_and_Atlas_actions=true actual_component_click=true duplicate_and_replay_refused=true precanceled_message_not_revived=true
+PASS workflow_share_roundtrip actual_Atlas_share_to_server_to_display_to_click=true server=unpublished_integrated sole_player=true external_recipients=false
+PASS workflow_sets create_assign_rename_hide_show_delete=true hidden_render_input_absent=true point_preserved=true coverage=production_repository_API
+PASS workflow_import_command actual_client_dispatch=true preview_screen_opened=true
+PASS workflow_import_xaero preview_read_only=true counts_and_set=true reimport_dedup=true undo_exact_snapshot=true coverage=production_preview_apply_undo_API
+PASS workflow_import_journeymap_legacy preview_read_only=true counts_and_set=true reimport_dedup=true undo_exact_snapshot=true coverage=production_preview_apply_undo_API
+PASS workflow_import_sources owned_synthetic_source_SHA256_unchanged=true actual_mod_files_touched=false
+PASS workflow_teleport actual_tp_command=true server_and_client_arrival=true nonop_client_gate=true wrong_dimension_refused=true fairplay_system_only=true menu_visibility=unexercised
+PASS workflow_restored points_sets_settings_policy_permission_position_chat_and_owned_files=true
+PASS spawn_light_fixture_ready cells=48 dimensions=4x4x3 A=1,75,65 B=2,75,65 difficulty=NORMAL randomTickSpeed=0 doMobSpawning=false full_cycle_gate_seconds=20
+PASS spawn_light_positive exact_air_cell_state=1 exact_blocked_cell_state=0 block_light=0 raw_light=0 exact_red_primitive=true
+PASS spawn_light_server_event before_revision=0 after_revision=1 cached_state_after=-1 source=server_setBlock_client_packet
+PASS spawn_light_same_column_recovery exact_obstructed_cell_state=0 comparison_state=0 exact_red_primitive=false
+PASS spawn_light_fixture_restored blocks=48 difficulty=PEACEFUL randomTickSpeed=3 settings_restored=true
+PASS waypoints_restored full points and sets snapshot restored
+fixture_pigs_removed=200

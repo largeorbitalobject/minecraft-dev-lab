@@ -1,0 +1,8 @@
+orbitalatlas.diag=true
+orbitalatlas.mapPerfLog=true
+orbitalatlas.workingSetReuse=true
+orbitalatlas.regionalOwnerOnce=true
+orbitalatlas.wideSceneLite=true
+orbitalatlas.wideSameMembers=true
+orbitalatlas.mapContentRedrawMs=50
+orbitalatlas.playProfile=true

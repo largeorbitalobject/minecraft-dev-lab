@@ -1,0 +1,108 @@
+{
+  "run_id": "smoke-20261005T072123-bdb8",
+  "instance": "McDevLab-Atlas",
+  "world": "MiniAtlas-Visual-1790853134481",
+  "dry_run": true,
+  "started_utc": "2026-10-05T07:21:23Z",
+  "jar_sha256": "0c863aca55eb8c2728ebadac39ee73578ab39f32321926d673648ddefd9b1ee5",
+  "label": "e18946e3",
+  "source_commit": "e18946e3bfda523605b2be47aeeec79548a6129e",
+  "idle_seconds_at_check": 0.0,
+  "idle_threshold_seconds": 600.0,
+  "session": {
+    "ok": true,
+    "console_user_present": true,
+    "on_console": true,
+    "screen_locked": true,
+    "display": {
+      "ok": true,
+      "window_server_session": true,
+      "display_asleep": false
+    }
+  },
+  "checks": [
+    {
+      "name": "no_PAUSE_file",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "candidate_installed",
+      "ok": true,
+      "detail": "jar sha 0c863aca55eb vs installed.json 0c863aca55eb"
+    },
+    {
+      "name": "only_candidate_atlas_jar",
+      "ok": true,
+      "detail": "orbital-atlas-mcdevlab-candidate.jar"
+    },
+    {
+      "name": "instance_diag_jvm_args",
+      "ok": true,
+      "detail": "instance.cfg JvmArgs"
+    },
+    {
+      "name": "launcher_present",
+      "ok": true,
+      "detail": "/Applications/Prism Launcher.app/Contents/MacOS/prismlauncher"
+    },
+    {
+      "name": "java_present",
+      "ok": true,
+      "detail": "/Library/Java/JavaVirtualMachines/liberica-jdk-21-full.jdk/Contents/Home/bin/java"
+    },
+    {
+      "name": "no_minecraft_java_running",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "no_leftover_McDevLab_prism",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "prism_not_running",
+      "ok": true,
+      "detail": "owner Prism already running pids=[] (launch is forwarded to it; it is never stopped)"
+    },
+    {
+      "name": "gui_session_unlocked",
+      "ok": false,
+      "detail": "{\"ok\": true, \"console_user_present\": true, \"on_console\": true, \"screen_locked\": true, \"display\": {\"ok\": true, \"window_server_session\": true, \"display_asleep\": false}}"
+    },
+    {
+      "name": "owner_idle_ge_600s",
+      "ok": false,
+      "detail": "HIDIdleTime=0s"
+    },
+    {
+      "name": "disk_free_ge_4GiB",
+      "ok": true,
+      "detail": "23.7 GiB"
+    },
+    {
+      "name": "fixture_zip_sha",
+      "ok": true,
+      "detail": "/Users/<user>/mcdevlab/fixtures/MiniAtlas-Visual-1790853134481.zip"
+    }
+  ],
+  "hardware": {
+    "cpu": "Apple M4 Pro",
+    "memory_bytes": "25769803776",
+    "macos": "26.5.2",
+    "model": "Mac16,8"
+  },
+  "thresholds": {
+    "game_timeout_seconds": 600.0,
+    "start_timeout_seconds": 180.0,
+    "exit_grace_seconds": 60.0,
+    "runner_cap_seconds": 840.0
+  },
+  "pass_criterion": "game exits on its own AND orbitalatlas/mcdevlab-feature-plan/result.txt starts with 'PASS feature-plan ON gate' AND no INCOMPLETE.txt",
+  "status": "REFUSED",
+  "reason": "gui_session_unlocked ({\"ok\": true, \"console_user_present\": true, \"on_console\": true, \"screen_locked\": true, \"display\": {\"ok\": true, \"window_server_session\": true, \"display_asleep\": false}}); owner_idle_ge_600s (HIDIdleTime=0s)",
+  "finished_utc": "2026-10-05T07:21:24Z",
+  "diag_count": 0,
+  "last_diag_line": null
+}

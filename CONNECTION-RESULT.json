@@ -1,0 +1,64 @@
+{
+  "utc": "2026-10-04T22:07:39.822195+00:00",
+  "status": "READONLY_ENDPOINT_PASS",
+  "installed_pyz_sha256": "452772731a50944ac09a913f6b56e9119133fde7b06aa3915760d6f0f71c7dfa",
+  "node_id": "proxmox-test",
+  "platform": "Linux",
+  "python": "3.13.5",
+  "logical_cpus": 6,
+  "instance": "atlas-client-files",
+  "observed_mod_jar_count": 260,
+  "truncated": false,
+  "actual_artifact": {
+    "bytes": 8203096,
+    "sha256": "98b9b3cc4cab1d6c87e23f2c4bab29cfae2263dd46da86ebb8a5e718144c312d",
+    "status": "PASS",
+    "loaders": [
+      "neoforge"
+    ]
+  },
+  "release_without_checks": {
+    "schema": "mcdev.release.v1",
+    "status": "NOT_RUN",
+    "readiness": "NOT_READY",
+    "artifact_sha256": "98b9b3cc4cab1d6c87e23f2c4bab29cfae2263dd46da86ebb8a5e718144c312d",
+    "artifact_bytes": 8203096,
+    "artifact_inspection": "PASS",
+    "required_checks": [
+      {
+        "name": "build:jar",
+        "status": "NOT_RUN",
+        "reason": "No receipt supplied"
+      },
+      {
+        "name": "visible_pixels:frozen453",
+        "status": "NOT_RUN",
+        "reason": "No receipt supplied"
+      }
+    ],
+    "unused_checks": [],
+    "publication": "NOT_REQUESTED",
+    "published": false,
+    "claim": "Local checklist readiness only, relative to caller-selected requirements and supplied receipts; no automatic publication, installation, native verification or efficacy claim",
+    "next_boundary": "Reinspect exact bytes and obtain target-specific authorization before publishing"
+  },
+  "native": "NOT_RUN",
+  "world_or_settings_modified": false,
+  "activated_in_Codex_UI": false,
+  "machine_config": "/root/minecraft-dev-lab-config/fleet.json",
+  "local_install": "/root/minecraft-dev-lab-install",
+  "receipts": "/root/minecraft-dev-plugin/.local/connection",
+  "installed_mcp": {
+    "status": "PASS",
+    "protocol": "2025-11-25",
+    "tool_count": 14,
+    "actual_remote_node": "proxmox-test",
+    "server_exit": 0,
+    "stdout_json_only": true,
+    "stderr_empty": true,
+    "Minecraft_or_desktop_actions": false
+  },
+  "marketplace": "/root/minecraft-dev-lab-install/.agents/plugins/marketplace.json",
+  "mcp_json": "/root/minecraft-dev-lab-install/mcp.json",
+  "mcp_toml": "/root/minecraft-dev-lab-install/mcp.toml"
+}

@@ -1,0 +1,8 @@
+orbitalatlas.diag=true
+orbitalatlas.mapPerfLog=true
+orbitalatlas.harnessPresentAll=true
+orbitalatlas.minimapQuadrantSplit=true
+orbitalatlas.minimapFineBias=2
+orbitalatlas.minimapFineBiasRadius=128
+orbitalatlas.rangeBindingCache=true
+orbitalatlas.scopeDiagnostics=true

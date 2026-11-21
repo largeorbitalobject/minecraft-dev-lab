@@ -1,0 +1,785 @@
+{
+ "schema": "atlas.perfsuite.manifest.v1",
+ "_comment": "Orbital Atlas perf suite. 'quick' = every rc (~30 min machine time per host per repeat); 'nightly' = adds the n-* scenarios. Perf hosts: fd, gpc, mac (each compared only with itself). ct224 = correctness/visual only (perf_comparable false).",
+ "props": {
+  "default": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true"
+  ],
+  "capped": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.sceneMeshBudgetMb=120",
+   "orbitalatlas.sceneMeshBudgetAdaptive=false"
+  ],
+  "off": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.harnessMapOff=true"
+  ],
+  "diagx": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.scopeDiagnostics=true"
+  ],
+  "b400": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.sceneMeshBudgetMb=400",
+   "orbitalatlas.sceneMeshBudgetAdaptive=false"
+  ],
+  "pc_sv": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.sceneViewCandidates=true"
+  ],
+  "pc_fill": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.minimapFillFastClip=true"
+  ],
+  "pc_paper": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.frontierPaperMemoMs=100"
+  ],
+  "pc_climb1": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.sceneViewCandidates=true",
+   "orbitalatlas.minimapFillFastClip=true",
+   "orbitalatlas.frontierPaperMemoMs=100"
+  ],
+  "pc_fs": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.travelAncestorHold=true"
+  ],
+  "pc_if16": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.asyncCaptureInFlight=16"
+  ],
+  "pc_fsif16": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.travelAncestorHold=true",
+   "orbitalatlas.asyncCaptureInFlight=16"
+  ],
+  "pc_svfill": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.sceneViewCandidates=true",
+   "orbitalatlas.minimapFillFastClip=true"
+  ],
+  "pc_svpaper": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.sceneViewCandidates=true",
+   "orbitalatlas.frontierPaperMemoMs=100"
+  ],
+  "pc_cat": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.catalogFastSnapshot=true"
+  ],
+  "l3_pb4": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.publicationBatch=4"
+  ],
+  "l3_t0": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.travelOtherTurnMs=0"
+  ],
+  "l3_pb4t0": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.publicationBatch=4",
+   "orbitalatlas.travelOtherTurnMs=0"
+  ],
+  "l3_hold": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.minimapHoldArrivals=true"
+  ],
+  "l3_kg": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.captureKeepGone=true"
+  ],
+  "l3_split": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.minimapQuadrantSplit=true"
+  ],
+  "l3_splitfine": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.minimapQuadrantSplit=true",
+   "orbitalatlas.minimapFineBias=2"
+  ],
+  "l3_splitfine1": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.minimapQuadrantSplit=true",
+   "orbitalatlas.minimapFineBias=1"
+  ],
+  "l3_splitfinekg": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.minimapQuadrantSplit=true",
+   "orbitalatlas.minimapFineBias=2",
+   "orbitalatlas.captureKeepGone=true"
+  ],
+  "l3_pbase": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.harnessPresentAll=true"
+  ],
+  "l3_psf": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.harnessPresentAll=true",
+   "orbitalatlas.minimapQuadrantSplit=true",
+   "orbitalatlas.minimapFineBias=2"
+  ],
+  "l3_psf1": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.harnessPresentAll=true",
+   "orbitalatlas.minimapQuadrantSplit=true",
+   "orbitalatlas.minimapFineBias=1"
+  ],
+  "l3_psfkg": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.harnessPresentAll=true",
+   "orbitalatlas.minimapQuadrantSplit=true",
+   "orbitalatlas.minimapFineBias=2",
+   "orbitalatlas.captureKeepGone=true"
+  ],
+  "l3_psfnear": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.harnessPresentAll=true",
+   "orbitalatlas.minimapQuadrantSplit=true",
+   "orbitalatlas.minimapFineBias=2",
+   "orbitalatlas.minimapFineBiasRadius=128"
+  ],
+  "l3_psfb": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.harnessPresentAll=true",
+   "orbitalatlas.minimapQuadrantSplit=true",
+   "orbitalatlas.minimapFineBias=2",
+   "orbitalatlas.rangeBindingCache=true"
+  ],
+  "l3_psfnb": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.harnessPresentAll=true",
+   "orbitalatlas.minimapQuadrantSplit=true",
+   "orbitalatlas.minimapFineBias=2",
+   "orbitalatlas.minimapFineBiasRadius=128",
+   "orbitalatlas.rangeBindingCache=true"
+  ],
+  "l3_psfbkg": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.harnessPresentAll=true",
+   "orbitalatlas.minimapQuadrantSplit=true",
+   "orbitalatlas.minimapFineBias=2",
+   "orbitalatlas.rangeBindingCache=true",
+   "orbitalatlas.captureKeepGone=true"
+  ],
+  "l4_pbase_sd": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.harnessPresentAll=true",
+   "orbitalatlas.scopeDiagnostics=true"
+  ],
+  "l4_psfnb_sd": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.harnessPresentAll=true",
+   "orbitalatlas.minimapQuadrantSplit=true",
+   "orbitalatlas.minimapFineBias=2",
+   "orbitalatlas.minimapFineBiasRadius=128",
+   "orbitalatlas.rangeBindingCache=true",
+   "orbitalatlas.scopeDiagnostics=true"
+  ],
+  "l4_psfb_sd": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.harnessPresentAll=true",
+   "orbitalatlas.minimapQuadrantSplit=true",
+   "orbitalatlas.minimapFineBias=2",
+   "orbitalatlas.rangeBindingCache=true",
+   "orbitalatlas.scopeDiagnostics=true"
+  ],
+  "l4_base": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.harnessPresentAll=true",
+   "orbitalatlas.scopeDiagnostics=true",
+   "orbitalatlas.harnessCensusLite=true"
+  ],
+  "l4_nb": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.harnessPresentAll=true",
+   "orbitalatlas.minimapQuadrantSplit=true",
+   "orbitalatlas.minimapFineBias=2",
+   "orbitalatlas.minimapFineBiasRadius=128",
+   "orbitalatlas.rangeBindingCache=true",
+   "orbitalatlas.scopeDiagnostics=true",
+   "orbitalatlas.harnessCensusLite=true"
+  ],
+  "l4_nbhb": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.harnessPresentAll=true",
+   "orbitalatlas.minimapQuadrantSplit=true",
+   "orbitalatlas.minimapFineBias=2",
+   "orbitalatlas.minimapFineBiasRadius=128",
+   "orbitalatlas.rangeBindingCache=true",
+   "orbitalatlas.scopeDiagnostics=true",
+   "orbitalatlas.harnessCensusLite=true",
+   "orbitalatlas.hudInstanceBatch=true"
+  ],
+  "l4_fbhb": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.harnessPresentAll=true",
+   "orbitalatlas.minimapQuadrantSplit=true",
+   "orbitalatlas.minimapFineBias=2",
+   "orbitalatlas.rangeBindingCache=true",
+   "orbitalatlas.scopeDiagnostics=true",
+   "orbitalatlas.harnessCensusLite=true",
+   "orbitalatlas.hudInstanceBatch=true"
+  ],
+  "l4_basehb": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.harnessPresentAll=true",
+   "orbitalatlas.scopeDiagnostics=true",
+   "orbitalatlas.harnessCensusLite=true",
+   "orbitalatlas.hudInstanceBatch=true"
+  ],
+  "pn_rs": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.workingSetReuse=true",
+   "orbitalatlas.regionalOwnerOnce=true",
+   "orbitalatlas.wideSceneLite=true",
+   "orbitalatlas.wideSameMembers=true",
+   "orbitalatlas.mapContentRedrawMs=50",
+   "orbitalatlas.wideReselectMs=300"
+  ],
+  "pn_mc": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.workingSetReuse=true",
+   "orbitalatlas.regionalOwnerOnce=true",
+   "orbitalatlas.wideSceneLite=true",
+   "orbitalatlas.wideSameMembers=true",
+   "orbitalatlas.mapContentRedrawMs=50"
+  ],
+  "p62b": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.harnessCensusLite=true",
+   "orbitalatlas.harnessPresentAll=true",
+   "orbitalatlas.playProfile=true",
+   "orbitalatlas.storedMapDetailFloor=true",
+   "orbitalatlas.worldCohortMemo=true",
+   "orbitalatlas.openingSavedTexture=true",
+   "orbitalatlas.artLandSplitScanCharge=true",
+   "orbitalatlas.exactRestoreTrim=true"
+  ],
+  "p62c": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.harnessCensusLite=true",
+   "orbitalatlas.harnessPresentAll=true",
+   "orbitalatlas.playProfile=true",
+   "orbitalatlas.nativeReadyMemo=true"
+  ],
+  "default_pp": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.playProfile=true",
+   "orbitalatlas.harnessCensusLite=true",
+   "orbitalatlas.harnessPresentAll=true"
+  ],
+  "pp_noslack": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.playProfile=true",
+   "orbitalatlas.harnessCensusLite=true",
+   "orbitalatlas.harnessPresentAll=true",
+   "orbitalatlas.slackBudget=false"
+  ],
+  "pp_notrust": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.playProfile=true",
+   "orbitalatlas.harnessCensusLite=true",
+   "orbitalatlas.harnessPresentAll=true",
+   "orbitalatlas.trustedRestore=false"
+  ],
+  "pp_median": [
+   "orbitalatlas.diag=true",
+   "orbitalatlas.mapPerfLog=true",
+   "orbitalatlas.playProfile=true",
+   "orbitalatlas.harnessCensusLite=true",
+   "orbitalatlas.harnessPresentAll=true",
+   "orbitalatlas.slackBudgetSteady=false"
+  ]
+ },
+ "scenarios": {
+  "q-basepack": {
+   "set": "quick",
+   "builder": "q_basepack",
+   "hosts": [
+    "fd",
+    "gpc",
+    "mac",
+    "ct224"
+   ],
+   "minutes": 20,
+   "stresses": "join->map, world-map zoom sweep 64..1024 cold/warm + pan + zoom burst + spin, 30 b/s flight + landing re-sharpen, 5 min walk, close-zoom relief pop-in, revisit re-sharpen",
+   "_comment": "Mac/fd frozen explored corridors. Whole-route detail timing is ineligible when raw realism fails; the prespecified warm wm2 64/128 station is independently audited by station_costs.py."
+  },
+  "q-cave": {
+   "set": "quick",
+   "builder": "q_cave",
+   "hosts": [
+    "fd",
+    "gpc",
+    "mac",
+    "ct224"
+   ],
+   "minutes": 9,
+   "stresses": "owner tunnel (-2776 -6 2881): minimap 64/128/256, world map 64..1024 + pan + spin underground"
+  },
+  "n-mixed": {
+   "set": "nightly",
+   "builder": "n_mixed",
+   "hosts": [
+    "fd",
+    "gpc",
+    "mac",
+    "ct224"
+   ],
+   "minutes": 20,
+   "stresses": "horse riding, block edits (edit_latency + fill burst), radar crowd (one of every mob), 200 marks, wide zoom 4096/16384, GUI scale 2/4, overworld->Nether walk->End->overworld"
+  },
+  "n-soak": {
+   "set": "nightly",
+   "builder": "n_soak",
+   "hosts": [
+    "fd",
+    "gpc",
+    "mac",
+    "ct224"
+   ],
+   "minutes": 24,
+   "stresses": "20 min mixed soak: 5 legs alternating 20 b/s flight and walking, world map opens, heap/GC/store per 60 s"
+  },
+  "q-basepack-off": {
+   "set": "arm-off",
+   "builder": "q_basepack_off",
+   "hosts": [
+    "fd",
+    "gpc",
+    "mac",
+    "ct224"
+   ],
+   "minutes": 15,
+   "stresses": "Atlas-off twin of q-basepack (map steps replaced by equal waits); run.py uses it automatically for --arm off"
+  },
+  "q-pingpong": {
+   "set": "pingpong",
+   "builder": "q_pingpong",
+   "hosts": [
+    "fd",
+    "gpc",
+    "mac",
+    "ct224"
+   ],
+   "minutes": 6,
+   "stresses": "world map A<->B return visits at span 256 (4 cycles) and 1024 (2 cycles): does the map keep what it just showed (reads from disk, evictions, coarse share, settled screenshots per visit)"
+  },
+  "q-flight": {
+   "set": "flight",
+   "builder": "q_flight",
+   "hosts": [
+    "fd",
+    "gpc",
+    "mac",
+    "ct224"
+   ],
+   "minutes": 5,
+   "stresses": "30 b/s flight only (q-basepack route), minimap screenshot per 10 s window, landing"
+  },
+  "q-flightpg": {
+   "set": "flight",
+   "builder": "q_flightpg",
+   "hosts": [
+    "fd",
+    "gpc",
+    "mac",
+    "ct224"
+   ],
+   "minutes": 9,
+   "stresses": "q-flight route over pre-generated chunks (forceload), lane 3"
+  },
+  "q-texture": {
+   "set": "quick",
+   "builder": "q_texture",
+   "hosts": [
+    "fd",
+    "gpc",
+    "mac",
+    "ct224"
+   ],
+   "minutes": 4,
+   "stresses": "mandatory playProfile=true plain-surface close-zoom time to first textured tile from map_state detT+detS on consistent fixture; zero in 60s or unrepresentative/missing telemetry FAILS",
+   "_comment": "Mac and fd measure a remote stored chart with a saved outdoor player. GPC and CT224 use their original physical-arrival stations; their Phase 2 qualification is pending."
+  },
+  "q-detail60": {
+   "set": "capped",
+   "builder": "q_detail60",
+   "hosts": [
+    "fd",
+    "gpc",
+    "mac"
+   ],
+   "minutes": 6,
+   "stresses": "60 fps cap (frame limiter, vsync off): close-map detail arrival after a relog (detT per 10 s) and frame time while it fills; three sessions, session 1 primes",
+   "_comment": "Added 2026-11-20 (Fable trusted-restore lane). Its own set, so quick and nightly are unchanged. Summarize with /root/atlas-beta-program/tools/fable2-detail60-sum.py."
+  }
+ },
+ "arms": {
+  "base": {
+   "props": "default"
+  },
+  "cap120": {
+   "props": "capped",
+   "_comment": "low-memory tier: map mesh budget pinned to the 120 MB floor (fd already lands there by its 512 MiB VRAM report)"
+  },
+  "off": {
+   "props": "off",
+   "_comment": "Atlas-off baseline (MapFailsafe.offForBaseline: map off all session, harness steps still register); measures the game+pack without Atlas on the same route"
+  },
+  "diagx": {
+   "props": "diagx",
+   "_comment": "base + scopeDiagnostics (per-frame Atlas CPU split into scopes other/deferred/block/reload/chunk/tick/hud/screen); used with JFR on the census build; not a timing arm"
+  },
+  "b400": {
+   "props": "b400",
+   "_comment": "fd only: the 400 MB budget the other hosts get (fd's adaptive scaling drops it to 120 on the iGPU's 512 MiB VRAM report)"
+  },
+  "sv": {
+   "props": "pc_sv",
+   "_comment": "perf-climb 2026-11-15: base + orbitalatlas.sceneViewCandidates=true (flags of the perf/* branches; an rc jar ignores them)"
+  },
+  "fill": {
+   "props": "pc_fill",
+   "_comment": "perf-climb 2026-11-15: base + orbitalatlas.minimapFillFastClip=true (flags of the perf/* branches; an rc jar ignores them)"
+  },
+  "paper": {
+   "props": "pc_paper",
+   "_comment": "perf-climb 2026-11-15: base + orbitalatlas.frontierPaperMemoMs=100 (flags of the perf/* branches; an rc jar ignores them)"
+  },
+  "climb1": {
+   "props": "pc_climb1",
+   "_comment": "perf-climb 2026-11-15: base + orbitalatlas.sceneViewCandidates=true, orbitalatlas.minimapFillFastClip=true, orbitalatlas.frontierPaperMemoMs=100 (flags of the perf/* branches; an rc jar ignores them)"
+  },
+  "fs": {
+   "props": "pc_fs",
+   "_comment": "perf-climb 2026-11-16: base + orbitalatlas.travelAncestorHold=true"
+  },
+  "if16": {
+   "props": "pc_if16",
+   "_comment": "perf-climb 2026-11-16: base + orbitalatlas.asyncCaptureInFlight=16"
+  },
+  "fsif16": {
+   "props": "pc_fsif16",
+   "_comment": "perf-climb 2026-11-16: base + orbitalatlas.travelAncestorHold=true, orbitalatlas.asyncCaptureInFlight=16"
+  },
+  "svfill": {
+   "props": "pc_svfill",
+   "_comment": "perf-climb 2026-11-16: base + orbitalatlas.sceneViewCandidates=true, orbitalatlas.minimapFillFastClip=true"
+  },
+  "svpaper": {
+   "props": "pc_svpaper",
+   "_comment": "perf-climb 2026-11-16: base + orbitalatlas.sceneViewCandidates=true, orbitalatlas.frontierPaperMemoMs=100"
+  },
+  "cat": {
+   "props": "pc_cat",
+   "_comment": "perf-climb 2026-11-16: base + orbitalatlas.catalogFastSnapshot=true"
+  },
+  "pb4": {
+   "props": "l3_pb4",
+   "_comment": "perf lane 3 2026-11-16: base + orbitalatlas.publicationBatch=4 (existing rc code, default 1): up to 3 finished captures follow the first onto the worker per slot hand-over"
+  },
+  "t0": {
+   "props": "l3_t0",
+   "_comment": "perf lane 3 2026-11-16: base + orbitalatlas.travelOtherTurnMs=0 (travel turn takes a queued source job with no other-work floor)"
+  },
+  "pb4t0": {
+   "props": "l3_pb4t0",
+   "_comment": "perf lane 3 2026-11-16: pb4 + t0"
+  },
+  "hold": {
+   "props": "l3_hold",
+   "_comment": "perf lane 3 2026-11-16: base + orbitalatlas.minimapHoldArrivals=true (perf/flight-admit; an rc jar ignores it)"
+  },
+  "kg": {
+   "props": "l3_kg",
+   "_comment": "perf lane 3 2026-11-16: base + orbitalatlas.captureKeepGone=true (existing rc code, default off): publish finished captures whose chunk/apron neighbour merely unloaded"
+  },
+  "split": {
+   "props": "l3_split",
+   "_comment": "perf lane 3 2026-11-16: base + orbitalatlas.minimapQuadrantSplit=true (perf/flight-admit; an rc jar ignores it)"
+  },
+  "splitfine": {
+   "props": "l3_splitfine",
+   "_comment": "perf lane 3 2026-11-16: base + minimapQuadrantSplit=true + minimapFineBias=2 (perf/flight-admit; an rc jar ignores them)"
+  },
+  "sf1": {
+   "props": "l3_splitfine1",
+   "_comment": "perf lane 3: split + minimapFineBias=1"
+  },
+  "sfkg": {
+   "props": "l3_splitfinekg",
+   "_comment": "perf lane 3: splitfine + captureKeepGone"
+  },
+  "pbase": {
+   "props": "l3_pbase",
+   "_comment": "perf lane 3: base with orbitalatlas.harnessPresentAll=true (uncapped tile-in-view measurement; perf-l3fine3+)"
+  },
+  "psf": {
+   "props": "l3_psf",
+   "_comment": "perf lane 3: splitfine with orbitalatlas.harnessPresentAll=true (uncapped tile-in-view measurement; perf-l3fine3+)"
+  },
+  "psf1": {
+   "props": "l3_psf1",
+   "_comment": "perf lane 3: split + fineBias 1 with orbitalatlas.harnessPresentAll=true (uncapped tile-in-view measurement; perf-l3fine3+)"
+  },
+  "psfkg": {
+   "props": "l3_psfkg",
+   "_comment": "perf lane 3: splitfine + captureKeepGone with orbitalatlas.harnessPresentAll=true (uncapped tile-in-view measurement; perf-l3fine3+)"
+  },
+  "psfnear": {
+   "props": "l3_psfnear",
+   "_comment": "perf lane 3: splitfine with the bias limited to 128 blocks round the minimap centre (perf-l3fine4+), uncapped presentation"
+  },
+  "psfb": {
+   "props": "l3_psfb",
+   "_comment": "perf lane 3: splitfine + rangeBindingCache (perf-l3fine5+), uncapped presentation"
+  },
+  "psfnb": {
+   "props": "l3_psfnb",
+   "_comment": "perf lane 3: splitfine + bias radius 128 + rangeBindingCache (perf-l3fine5+), uncapped presentation"
+  },
+  "psfbkg": {
+   "props": "l3_psfbkg",
+   "_comment": "perf lane 3: psfb + captureKeepGone"
+  },
+  "pbasesd": {
+   "props": "l4_pbase_sd",
+   "_comment": "perf lane 4: lane-3 arm pbase + scopeDiagnostics (HUD phase timers, draw counts, per-scope CPU)"
+  },
+  "psfnbsd": {
+   "props": "l4_psfnb_sd",
+   "_comment": "perf lane 4: lane-3 arm psfnb + scopeDiagnostics (HUD phase timers, draw counts, per-scope CPU)"
+  },
+  "psfbsd": {
+   "props": "l4_psfb_sd",
+   "_comment": "perf lane 4: lane-3 arm psfb + scopeDiagnostics (HUD phase timers, draw counts, per-scope CPU)"
+  },
+  "l4base": {
+   "props": "l4_base",
+   "_comment": "perf lane 4 (perf-l4cheap1+): base (presentAll) + scopeDiagnostics + harnessCensusLite"
+  },
+  "l4nb": {
+   "props": "l4_nb",
+   "_comment": "perf lane 4 (perf-l4cheap1+): splitfine r128 (psfnb) + sd + censusLite"
+  },
+  "l4nbhb": {
+   "props": "l4_nbhb",
+   "_comment": "perf lane 4 (perf-l4cheap1+): psfnb + sd + censusLite + hudInstanceBatch"
+  },
+  "l4fbhb": {
+   "props": "l4_fbhb",
+   "_comment": "perf lane 4 (perf-l4cheap1+): full splitfine (psfb) + sd + censusLite + hudInstanceBatch"
+  },
+  "l4basehb": {
+   "props": "l4_basehb",
+   "_comment": "perf lane 4 (perf-l4cheap1+): base + sd + censusLite + hudInstanceBatch"
+  },
+  "prs": {
+   "props": "pn_rs",
+   "_comment": "perf-night 2026-11-17: base + the rs bundle (workingSetReuse, regionalOwnerOnce, wideSceneLite, wideSameMembers, mapContentRedrawMs=50, wideReselectMs=300); flags of l0/perf-night2, an rc jar ignores the new ones"
+  },
+  "pmc": {
+   "props": "pn_mc",
+   "_comment": "perf-night 2026-11-17: base + cov flags + mapContentRedrawMs=50 (rs without wideReselectMs=300)"
+  },
+  "p62b": {
+   "props": "p62b",
+   "_comment": "Phase 2 B, five independently gated flags in pc62-b-trim1; exact native restore trim is the fifth flag"
+  },
+  "p62c": {
+   "props": "p62c",
+   "_comment": "Phase 2 C, physical native readiness memo in pc62-ready1"
+  },
+  "p62a": {
+   "props": "default",
+   "_comment": "Second label for a byte-identical paired base/base control"
+  },
+  "pp": {
+   "props": "default_pp",
+   "_comment": "base with the product play profile and the lite census (added 2026-11-20, Fable lane; used for the default-ON regression ABBA and q-detail60)"
+  },
+  "ppnoslack": {
+   "props": "pp_noslack",
+   "_comment": "pp with the idle-time allowance off (default-ON candidate attribution, 2026-11-20)"
+  },
+  "ppnotrust": {
+   "props": "pp_notrust",
+   "_comment": "pp with trusted restore off (default-ON candidate attribution, 2026-11-20)"
+  },
+  "ppmedian": {
+   "props": "pp_median",
+   "_comment": "pp with the allowance's first rule (last frame and median) instead of the window minimum (2026-11-21)"
+  }
+ },
+ "unmeasurable": {
+  "create_base": "no Create-base fixture exists (fd has only the 2026-11-11 create-farm construct runs' preserved game dirs, not a registered fixture)",
+  "sodium_off": "the large runners clone the fixed lab pack (Sodium installed) and only swap the Atlas/harness jars; a no-Sodium arm needs a runner change",
+  "render_scale": "no render-scale option or Atlas property exists; harness set_option allows guiScale only",
+  "heap_cap": "the runners fix the heap (6 GiB fd/CT224); a low heap arm needs a runner change; cap120 covers the Atlas budget tier",
+  "server_mspt": "the Atlas server add-on logs no tick time; integrated-server tick_ms per segment is recorded instead; a CT224 dedicated-server mspt run was not built",
+  "scroll_zoom": "harness 0.1.1-gravity has no scroll/key step, so zoom is instant open_map re-poses (zoom smoothness = frame spikes around re-poses)"
+ },
+ "fixture_registry": {
+  "owner-lush-outdoors-20261118b-consistent": {
+   "manifest_sha256": "7c83c63a3a04d54f5bf459b885e6dc2b74bfcc9c26da63154e6772f884be8461",
+   "mac_pristine": "pristine-pc62b-outdoors-consistent"
+  },
+  "pc62b-fd-visited-desert-rc172-consistent": {
+   "manifest_sha256": "f9cebd182ec177e339168c0b6cd6cc0cbf4e5362bf43b413aac55365e4b11cc3"
+  },
+  "pc62b-fd-basepack-level-rc172-consistent": {
+   "manifest_sha256": "9634d131862f63506a184b57ad3c0a5b5b1e996b99f4652a1f0660465170a9b6"
+  },
+  "pc62b-fd-surface-rc172-consistent": {
+   "manifest_sha256": "cce0e7fa82303a727d8983484de28b693836bcf933576e54b64e284c6d595700"
+  },
+  "large-gpc-grounded-20261118b-consistent": {
+   "tar_sha256": "527d242747ae1a77ca9749dcd939a8e04cc5a3cc50184e9ca0b5369cee2df381",
+   "world_tar_sha256": "af69b454636c0520260ba1c4c365c8b0085f6642cbc093aac925044a091d4570"
+  },
+  "large-gpc-remote-20261118b-consistent": {
+   "tar_sha256": "5960b1d6fc72a24dac00a0c68fe3b6f809c251d288fb53b65e9c2215f3f182ea",
+   "world_tar_sha256": "3508bc2ca6fb543c7f14e8a7e827c0628a1c6a9da1ce9a734ef53abc6ce5fde0"
+  }
+ },
+ "representative_stations": {
+  "mac": {
+   "budget_mb": 400,
+   "routes": {
+    "q-basepack": {
+     "fixture": "owner-lush-outdoors-20261118b-consistent",
+     "scenario_sha256": "9f2b9c1b60d0f926394fc61b8333214ab86929441a44f48f19af5ce69683f905",
+     "flight": [
+      -1815.5,
+      1848.5,
+      235
+     ],
+     "walk": [
+      -2291.5,
+      2050.5,
+      49.75
+     ],
+     "walk_altitude": 138,
+     "description": "Full base-pack map, flight and revisit cadence on explored charted regions. The 300-second slow aerial traversal uses a distinct 1680-block corridor and Y138 clearance above the persisted surface."
+    },
+    "q-texture": {
+     "fixture": "owner-lush-outdoors-20261118b-consistent",
+     "scenario_sha256": "fa85a7161fe71adab544fdd5996e43aedb321dcf5fd17042e3d2827c759b3a0c",
+     "chart": [
+      -568,
+      872
+     ],
+     "description": "Cold first open of a saved surface chart 138 chunks from the outdoor player. Target selected from matching native capture identities. The unchanged world-load interval is audited."
+    }
+   }
+  },
+  "fd": {
+   "budget_mb": 120,
+   "routes": {
+    "q-texture": {
+     "fixture": "pc62b-fd-surface-rc172-consistent",
+     "scenario_sha256": "9b1be0447ca41ae3811e31ac246fc53195e7f57c84a26a8a874d709c5071bdad",
+     "chart": [
+      -2776,
+      2881
+     ],
+     "camera_y": 81,
+     "description": "Cold first open of the proven outdoor riverbank, 2,028 blocks away from the player saved on the original desert. Camera elevation 81 is the observed outdoor ground+1 at that riverbank. No player teleport during replay. After all 61 original polls and the screenshot, wait for an authentic counter heartbeat and display the same map for another 4.25 seconds. Then close normally. The six-second visible HUD tail is retained and its independent counters are reported.",
+     "json_indent": 1,
+     "close_after_heartbeat_seconds": 4.25
+    },
+    "q-basepack": {
+     "fixture": "pc62b-fd-basepack-level-rc172-consistent",
+     "scenario_sha256": "36e7107f7f57a8fe01c448cfcb978e7a2e585c59dbf987df690eb4d5f0f900e3",
+     "flight": [
+      -887.5,
+      1992.5,
+      102
+     ],
+     "comment": "FD measured explored flight and independent unchanged walk. At the original 230-block altitude and speed, the 1,895-block corridor plus one full chunk of side clearance has no stored relief above Y215; every centerline chunk and every possible nominal landing neighborhood R8 are pre-charted."
+    }
+   }
+  },
+  "gpc": {
+   "budget_mb": 400,
+   "routes": {
+    "q-basepack": {
+     "fixture": "large-gpc-remote-20261118b-consistent",
+     "scenario_sha256": "b8f41972d0a3a33211f60f455322afd7a268f7278cc0cacd92c81da68eb14bac",
+     "flight": [
+      -53591.5,
+      4152.5,
+      79
+     ],
+     "walk": [
+      -53549.02879299315,
+      3885.5455005119766,
+      71
+     ],
+     "walk_altitude": 155
+    },
+    "q-texture": {
+     "fixture": "large-gpc-grounded-20261118b-consistent",
+     "scenario_sha256": "9b76b032bbcf2f887695f375c9ba88b75a1b7ca6a15189c57c5718a05eea9a49",
+     "chart": [
+      24,
+      88
+     ],
+     "camera_y": 66,
+     "dialog_timeout": null,
+     "json_indent": 1,
+     "description": "A cold remote spawn-chart opening from the saved grounded home. The model sources have current masked capture IDs. Full normal return to the minimap."
+    }
+   }
+  }
+ }
+}

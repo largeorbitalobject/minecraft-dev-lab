@@ -1,0 +1,4 @@
+orbitalatlas.diag=true
+orbitalatlas.mapPerfLog=true
+orbitalatlas.sceneMeshBudgetMb=400
+orbitalatlas.sceneMeshBudgetAdaptive=false

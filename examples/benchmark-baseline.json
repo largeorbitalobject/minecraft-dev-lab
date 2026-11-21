@@ -1,0 +1,131 @@
+[
+  {
+    "schema": "mcdev.benchmark.v1",
+    "run_id": "baseline-1",
+    "launch_id": "fresh-jvm-baseline-1",
+    "pair_id": "pair-1",
+    "status": "PASS",
+    "artifact_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "evidence_kind": "cpu_component",
+    "context": {
+      "scene": "SYNTHETIC-offline-example-v1",
+      "fixture": {
+        "manifest_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+      },
+      "settings": {
+        "page_limit": 1024
+      },
+      "hardware": {
+        "worker": "offline-example",
+        "cpu": "example",
+        "gpu": "none"
+      },
+      "toolchain": {
+        "java": "21",
+        "minecraft": "1.21.1",
+        "loader": "example"
+      },
+      "timing_origin": "encoder-entry-to-return/thread-cpu",
+      "protocol": "SYNTHETIC-schema-example-not-measured",
+      "cache_state": {
+        "jvm": "fresh",
+        "filesystem": "warm",
+        "warmups": 0
+      }
+    },
+    "metrics": {
+      "mesh_cpu_v1": {
+        "value": 300,
+        "unit": "ms",
+        "direction": "lower",
+        "measurement": "direct"
+      }
+    }
+  },
+  {
+    "schema": "mcdev.benchmark.v1",
+    "run_id": "baseline-2",
+    "launch_id": "fresh-jvm-baseline-2",
+    "pair_id": "pair-2",
+    "status": "PASS",
+    "artifact_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "evidence_kind": "cpu_component",
+    "context": {
+      "scene": "SYNTHETIC-offline-example-v1",
+      "fixture": {
+        "manifest_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+      },
+      "settings": {
+        "page_limit": 1024
+      },
+      "hardware": {
+        "worker": "offline-example",
+        "cpu": "example",
+        "gpu": "none"
+      },
+      "toolchain": {
+        "java": "21",
+        "minecraft": "1.21.1",
+        "loader": "example"
+      },
+      "timing_origin": "encoder-entry-to-return/thread-cpu",
+      "protocol": "SYNTHETIC-schema-example-not-measured",
+      "cache_state": {
+        "jvm": "fresh",
+        "filesystem": "warm",
+        "warmups": 0
+      }
+    },
+    "metrics": {
+      "mesh_cpu_v1": {
+        "value": 320,
+        "unit": "ms",
+        "direction": "lower",
+        "measurement": "direct"
+      }
+    }
+  },
+  {
+    "schema": "mcdev.benchmark.v1",
+    "run_id": "baseline-3",
+    "launch_id": "fresh-jvm-baseline-3",
+    "pair_id": "pair-3",
+    "status": "PASS",
+    "artifact_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "evidence_kind": "cpu_component",
+    "context": {
+      "scene": "SYNTHETIC-offline-example-v1",
+      "fixture": {
+        "manifest_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+      },
+      "settings": {
+        "page_limit": 1024
+      },
+      "hardware": {
+        "worker": "offline-example",
+        "cpu": "example",
+        "gpu": "none"
+      },
+      "toolchain": {
+        "java": "21",
+        "minecraft": "1.21.1",
+        "loader": "example"
+      },
+      "timing_origin": "encoder-entry-to-return/thread-cpu",
+      "protocol": "SYNTHETIC-schema-example-not-measured",
+      "cache_state": {
+        "jvm": "fresh",
+        "filesystem": "warm",
+        "warmups": 0
+      }
+    },
+    "metrics": {
+      "mesh_cpu_v1": {
+        "value": 310,
+        "unit": "ms",
+        "direction": "lower",
+        "measurement": "direct"
+      }
+    }
+  }
+]

@@ -1,0 +1,89 @@
+{
+  "schema": "orbital-atlas.fd-smoke.v1",
+  "run_id": "20261005T070804Z",
+  "host": "orbital-fd",
+  "smoke_script": "tools/run_orbital_smoke.py",
+  "args": [
+    "--display",
+    ":95",
+    "--expected-renderer",
+    "AMD Radeon Graphics (radeonsi",
+    "--run-label",
+    "fd-client-smoke",
+    "--stencil-state-probe"
+  ],
+  "candidate": {
+    "sha256": "0c863aca55eb8c2728ebadac39ee73578ab39f32321926d673648ddefd9b1ee5",
+    "label": "e18946e3",
+    "source_commit": "e18946e3bfda523605b2be47aeeec79548a6129e",
+    "mod_id": "orbitalatlas",
+    "bytes": 8470740
+  },
+  "started": 1791184084.035706,
+  "checks": {
+    "smoke_launcher_exit_0": true,
+    "renderer_verified_line": true,
+    "renderer_is_amd_radeonsi_not_llvmpipe": true,
+    "client_not_orphaned": true,
+    "client_finished_within_deadline": true,
+    "client_log_present": true,
+    "minecraft_clean_stop": true,
+    "no_game_crashed_marker": true,
+    "no_new_crash_report": true,
+    "no_hs_err": true,
+    "launched_jar_is_candidate": true,
+    "atlas_mod_loaded_in_log": true,
+    "game_reported_radeonsi_renderer": true,
+    "stencil_result_PASS": true,
+    "stencil_alpha_result_PASS": true,
+    "stencil_scissor_result_PASS": true
+  },
+  "failures": [],
+  "smoke_launcher_exit": 0,
+  "renderer": "AMD Radeon Graphics (radeonsi, gfx1151, LLVM 20.1.8, DRM 3.64, 7.0.0-34-generic)",
+  "client_pid": 3225712,
+  "gpu_identity": {
+    "display": ":95",
+    "vendor": "AMD",
+    "renderer": "AMD Radeon Graphics (radeonsi, gfx1151, LLVM 20.1.8, DRM 3.64, 7.0.0-34-generic)",
+    "version": "4.6 (Compatibility Profile) Mesa 25.3.0-devel"
+  },
+  "jar_sha256_launched": "0c863aca55eb8c2728ebadac39ee73578ab39f32321926d673648ddefd9b1ee5",
+  "effective_max_heap": "-Xmx6G",
+  "atlas_log_lines": [
+    "Orbital Atlas 0.2.0-alpha.1 (orbitalatlas)"
+  ],
+  "log_tail": [
+    "[00:09:04] [Render thread/INFO] [Entity Texture Features/]: [ETF]: emissive suffixes loaded: [_e]",
+    "[00:09:04] [Render thread/ERROR] [fzzy_config/]: Mod terralith uses outdated modproperties format. See https://github.com/fzzyhmstrs/fconfig/blob/master/wiki/config-design/Troubleshooting.mdx for proper 1.21.1+ syntax",
+    "[00:09:04] [CullThread/INFO] [minecraft/LoggedPrintStream]: [STDOUT]: Shutting down culling task!",
+    "[00:09:04] [Render thread/INFO] [minecraft/Minecraft]: Stopping!",
+    "[00:09:04] [Render thread/INFO] [Vista/]: Restored 0 cached videos from disk",
+    "[00:09:04] [Render thread/INFO] [Vista/]: Media Cache initialized at /opt/orbital-atlas/cubeworld-map/build/client-production-2026-09-10/vista_web_content_cache, max size = 512 MB",
+    "[00:09:04] [Render thread/INFO] [Entity Texture Features/]: [ETF]: emissive suffixes loaded: [_e]",
+    "[00:09:04] [Render thread/INFO] [Entity Texture Features/]: [ETF]: emissive suffixes loaded: [_e]"
+  ],
+  "fresh_result_file_count": 7,
+  "fresh_result_dirs": {
+    "orbitalatlas/smoke-stencil-state": 7
+  },
+  "fresh_result_files": {
+    "orbitalatlas/smoke-stencil-state/result.txt": 166,
+    "orbitalatlas/smoke-stencil-state/observations.csv": 199,
+    "orbitalatlas/smoke-stencil-state/scissor-result.txt": 119,
+    "orbitalatlas/smoke-stencil-state/scissor-observations.csv": 262,
+    "orbitalatlas/smoke-stencil-state/alpha-result.txt": 223,
+    "orbitalatlas/smoke-stencil-state/alpha-observations.csv": 469,
+    "orbitalatlas/smoke-stencil-state/attachment.txt": 57
+  },
+  "game_opengl_renderer": "AMD Radeon Graphics (radeonsi, gfx1151, LLVM 20.1.8, DRM 3.64, 7.0.0-34-generic)",
+  "probe_results": {
+    "result.txt": "PASS six actual GPU stencil clear/write-mask/state restoration cases across three framebuffer sizes. Not terrain alpha, water, shader-pack or performance acceptance.",
+    "alpha-result.txt": "PASS eight native textured-shader alpha cases: discarded texels admit chart, surviving opaque/translucent texels remain unchanged. Synthetic texture; not full water, surface shader, resource-pack or performance acceptance.",
+    "scissor-result.txt": "PASS six real GPU full-clear, clipping and foreign scissor restoration cases. Not map image or performance acceptance."
+  },
+  "finished": 1791184145.628792,
+  "duration_s": 61.6,
+  "verdict": "PASS",
+  "run_dir": "/opt/orbital-atlas/results/runs/20261005T070804Z"
+}

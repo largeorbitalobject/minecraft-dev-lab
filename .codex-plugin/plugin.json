@@ -1,0 +1,11 @@
+{
+  "name": "minecraft-dev-lab",
+  "version": "0.1.0",
+  "description": "Build, test, benchmark, and prepare releases for Minecraft development projects with bounded jobs and evidence receipts.",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Minecraft Dev Lab",
+    "shortDescription": "Minecraft builds, tests, and performance evidence"
+  }
+}

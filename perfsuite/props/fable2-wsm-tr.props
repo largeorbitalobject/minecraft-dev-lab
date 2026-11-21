@@ -1,0 +1,9 @@
+orbitalatlas.keyClashHintShown=key.wands.area_diagonal_spread@NONE:key.keyboard.comma
+# 2026-10-23 L0: timing-only diagnostics for the minimap stall report (remove these two lines to turn off)
+orbitalatlas.mapPerfLog=true
+orbitalatlas.restoreReadPhases=true
+orbitalatlas.minimapStartTrace=true
+orbitalatlas.minimapStartTraceSeconds=600
+# 2026-10-27 L0: owner-approved Atlas diagnostics (one log line every 5 s; remove to turn off)
+orbitalatlas.diag=true
+orbitalatlas.trustedRestore=true

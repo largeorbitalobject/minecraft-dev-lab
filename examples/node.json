@@ -1,0 +1,26 @@
+{
+  "schema": "mcdev.node.v1",
+  "id": "local-test",
+  "state_dir": "/absolute/private/path/minecraft-dev-lab-state",
+  "expected_gpu": null,
+  "guards": [],
+  "instances": {
+    "mod-worktree": {
+      "label": "Isolated mod worktree",
+      "root": "/absolute/path/to/mod-worktree",
+      "enabled": false,
+      "mods_dir": "run/mods",
+      "recipes": {
+        "build": {
+          "kind": "build",
+          "argv": ["/absolute/path/to/approved-build-wrapper", "build", "classes", "jar"],
+          "cwd": ".",
+          "resource": "shared-build-client",
+          "timeout_seconds": 180,
+          "output_limit_bytes": 2097152,
+          "artifacts": ["build/libs/your-mod.jar"]
+        }
+      }
+    }
+  }
+}

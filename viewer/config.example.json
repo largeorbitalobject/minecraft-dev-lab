@@ -1,0 +1,27 @@
+{
+  "port": 8095,
+  "poll_interval_s": 60,
+  "live_interval_s": 5,
+  "per_run_cap_mb": 30,
+  "total_originals_budget_mb": 1500,
+  "hosts": {
+    "ctl": {
+      "sources": [
+        {"type": "harness", "root": "/root/mcdevlab-shared/harness/test-runs", "maxdepth": 4}
+      ]
+    },
+    "my-linux-box": {
+      "label": "my-linux-box (RTX 3070)", "platform": "Linux", "hardware": "RTX 3070",
+      "transport": {"type": "argv", "argv": ["ssh", "-o", "BatchMode=yes", "me@my-linux-box", "python3 -"]},
+      "candidate_files": [],
+      "pause_files": ["/etc/mcdevlab-paused"],
+      "sources": [
+        {"type": "harness", "root": "/home/me/mcdevlab/test-runs", "maxdepth": 4,
+         "include": ["result.json", "progress.jsonl", "harness.log", "client.log", "latest.log", "*.png"],
+         "inline": ["result.json", "progress.jsonl"], "inline_max": 4000000,
+         "exclude_dirs": ["game", "saves", "mods", "config", "crash-reports", "cache"]}
+      ]
+    },
+    "gpc": null
+  }
+}

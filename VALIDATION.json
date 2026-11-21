@@ -1,0 +1,51 @@
+{
+  "schema": "mcdev.validation.v1",
+  "version": "0.1.0",
+  "utc": "2026-10-04T22:05:36.437054+00:00",
+  "status": "PASS",
+  "test_count": 102,
+  "test_command": "python3 -m unittest discover -s tests -v",
+  "test_log_sha256": "2bd6bff72dd7b969d1e65d093efc55a265e6b4f95d519529e2bad2284cf66f9b",
+  "platform": "Linux",
+  "python": "3.13.5",
+  "tests": {
+    "MCP_protocol": 13,
+    "install_and_package": 11,
+    "bridge_provider": 13,
+    "evidence": 52,
+    "node_lifecycle": 13
+  },
+  "source_sha256": {
+    "mcdevlab/__init__.py": "83beb56797fad35cabfceb363ef4abf08695307df30256ddb59dac6799fc865b",
+    "mcdevlab/__main__.py": "8406225cc4ff4697a0e0feaacf5c904f0cfce4045441a140664348445f06a63b",
+    "mcdevlab/api.py": "251364b4a7df94fc198d8845285d7d91329b407cfea2a3f175fca36235006f40",
+    "mcdevlab/bridges.py": "45bcda88a519f3196d68fcf23e98a2e34645c48e0c4363c1389ab4843136385d",
+    "mcdevlab/common.py": "fd359437f2587a1972a46433a582be1445e6caca15719d44159e846de9cdbddc",
+    "mcdevlab/evidence.py": "3f17bc3f718c434079c6e64bb1760c44657e76000ecdf0622815b83c5790eb83",
+    "mcdevlab/mcp.py": "16b8960b36b2600dff547ecc7f4e0b27531b3bcf6675bc9f69ecb2d0b258941a",
+    "mcdevlab/node.py": "9191b7f242144e8d85424eb0bc25ab2ba48cf5b551ea9c780ebe931e2ba0030b",
+    "mcdevlab/processes.py": "6010957a9e1e87d8b2e0bfd727a127db10ceac34783093b74ba432921995e0fa",
+    "tests/test_bridges.py": "c2b657a5b490dbc96ef3bf1ea759b88f06f4ef4b7c10d487278e65a929e88732",
+    "tests/test_evidence.py": "d13939d6976fee7a81ae975a08227b4b2be7e5ddd69c8128b0b09c0a4cd756cb",
+    "tests/test_install.py": "6197dc7a8b1463e3f81afc1cbab5465130e52142d0d10975bef0bb3f68aabd91",
+    "tests/test_mcp.py": "ca7edcb92f344501541e22d7e170b0b9aa875b482c6c5dffff62391c01054327",
+    "tests/test_node.py": "b6abcf996db28ea9497268f2ec15feccff3caf168e54632b1d9b19f51af28b5b"
+  },
+  "actual_executions": [
+    "Linux stdio MCP both2025-11-25 and2026-07-28",
+    "Real ZIP installer into spaces/Unicode path",
+    "Installed zipapp fleet->node->worker->exec from unrelatedcwd",
+    "Real synthetic subprocess jobs/cancel/descendants/guards/timeouts/logcap",
+    "Real pinned fixtureprovider request/session/world/frame tests",
+    "Real fixtureJAR metadata and actual read-only AtlasJAR inspection"
+  ],
+  "not_run": [
+    "Windows execution",
+    "macOS execution",
+    "Minecraft launch/gameplay/desktop/GPU",
+    "Actual Codex UI plugin activation",
+    "Remote mod publication"
+  ],
+  "game_acceptance": "NOT_RUN",
+  "note": "Fixtures test infrastructure behavior; they are not native Minecraft or loading/FPS results. Current host connections are separately documented after installation."
+}

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dev Lab Viewer</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="mast">
+  <div class="mast-in">
+    <span class="wordmark">ORBITIS LABS</span>
+    <span class="appname">Dev Lab Viewer</span>
+    <nav class="nav" id="nav" aria-label="Sections">
+      <a href="#/" data-nav="fleet">Fleet</a>
+      <a href="#/runs" data-nav="runs">Runs</a>
+      <a href="#/compare" data-nav="compare">Compare</a>
+      <a href="#/history" data-nav="history">History</a>
+      <span class="marker" id="marker"></span>
+    </nav>
+    <span class="feed" id="feed">collector: loading</span>
+  </div>
+</header>
+<main id="main"></main>
+<div id="live-region" class="sr" aria-live="polite"></div>
+<script src="/static/app.js"></script>
+</body>
+</html>
